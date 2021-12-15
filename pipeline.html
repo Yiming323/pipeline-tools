@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='static/css/css-RobotoCondensed400300italic4.css' rel='stylesheet' type='text/css'>
+<link href="static/css/css-NotoSerif.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="print" href="static/css/print.css">
+<link rel="stylesheet" type="text/css" media="screen" href="static/css/searchstyle.css">
+<link rel="stylesheet" type="text/css" media="screen" href="static/css/font-awesome.min.css">
+<title>Automated condition assessment for pipelines with machine learning | Stevens Institute of Technology</title>
+<meta name='robots' content='noindex,nofollow'>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+
+blockquote { 
+  display: block;
+  font-size:14px;
+  background: #f9f9f9;
+  border-left: 5px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='static/css/style.min-5.4.2.css' type='text/css' media='all'>
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='coe-responsive-style-css' href='static/css/style-5.4.2.css' type='text/css' media='all'>
+<link rel='stylesheet' id='coe-responsive-total-slider-css' href='static/css/totalslider-5.4.2.css' type='text/css' media='all'>
+<link rel='stylesheet' id='jetpack_css-css' href='static/css/jetpack-8.4.2.css' type='text/css' media='all'>
+<script type='text/javascript' src='static/js/jquery-1.12.4-wp.js'></script>
+<script type='text/javascript' src='static/js/jquery-migrate.min-1.4.1.js'></script>
+<script type='text/javascript' src='static/js/jquery.tablesorter.min-5.4.2.js'></script>
+<script type='text/javascript' src='static/js/jquery.tablesorter.widgets.min-5.js'></script>
+<script type='text/javascript' src='static/js/external-tracking.min-6.5.4.js'></script>
+<link rel="canonical" href="">
+
+<style type="text/css">
+#content table td, #content table th {
+	border: 1px solid #ccc;
+}
+</style>
+</head>
+
+<body class="home page-template-default page page-id-2 page-parent">
+
+<div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="">Skip to content</a>
+
+	<header id="masthead" class="site-header" role="banner">
+                <div class="site-branding">
+                <div id="search" style="display:none">
+                        <form role="search" method="get" id="searchform" action="#">
+	<label for="s" class="hide">Search</label>
+	<input type="hidden" name="s" id="s"><!-- 's' is to get the WP search page. 'q' is to hold the G-CSE search query. -->
+	<label for="q" class="show-for-sr">Search</label>
+	<input type="text" name="q" id="q" placeholder="Search">
+</form>
+
+                </div>
+                </div><!-- .site-branding -->
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><span id="menu-icon-text">Menu</span></button>
+			<div class="menu-main-nav-container">
+				<ul id="primary-menu" class="menu">
+					<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-has-children menu-item-37">
+						<a href="index.html" aria-current="page">Home</a>
+					</li>
+					<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-221"><a href="director.html">People</a>
+						<ul class="sub-menu">
+							<li id="menu-item-220" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-220"><a href="director.html">Director</a></li>
+							<li id="menu-item-219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="members.html">Members</a></li>
+							<li id="menu-item-2191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-219"><a href="former.html">Former members</a></li>
+						</ul>
+					</li>
+					<li id="menu-item-227" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-227"><a title="Research" href="research.html">Research</a>
+					<ul class="sub-menu">
+						<li id="menu-item-2047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2047"><a href="research.html">Research</a></li>
+						<li id="menu-item-86812" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-868"><a href="facilities.html">Facilities</a></li>
+						<li id="menu-item-86821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-868"><a href="equipment.html">Equipment</a></li>
+					</ul>
+					</li>
+					<li id="menu-item-707" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-707"><a title="Publications" href="Journals.html">Publications</a>
+					<ul class="sub-menu">
+						<li id="menu-item-2047" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2047"><a href="Journals.html">Journals</a></li>
+						<li id="menu-item-868" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-868"><a href="Conference.html">Conference proceedings</a></li>
+					</ul>
+					</li>
+					<li id="menu-item-1121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1121"><a href="Courses.html">Courses</a>
+					</li>
+					<li id="menu-item-910" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-910"><a href="Outreach.html">Outreach</a>
+					</li>
+					<li id="menu-item-913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-913"><a href="organization.html">Organization</a>
+					</li>
+					<li id="menu-item-919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-919"><a href="News.html">Latest News</a>
+					</li>
+					<li id="menu-item-1531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1531"><a href="Contact-us.html">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+        <div id="content" class="site-content">
+
+<div id="content-inner-container" class="no-right-widgets ">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+			
+				
+
+<div id="photo-theater">
+
+
+</div>
+
+<article id="post-2" class="post-2 page type-page status-publish hentry">
+	<header class="entry-header">
+		<!--- Page header -->
+					</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<h3 style="text-align: center">Machine learning algorithm selection tool for pipeline condition assessment</h3>
+		<h2 class="ptag">Introduction</h2>
+		<p style="font-size:14px;">
+		There are many types of nondestructive testing data, pre-processing algorithms, feature extraction methods, and machine learning models used for pipeline condition assessment when using machine learning methods to detect, classify, locate and quantify one or more types of anomalies, including functional anomalies and structural defects.
+		Choosing the appropriate algorithm is difficult. This website provides an online algorithm recommendation tool based on your needs.
+		</p>
+	
+		<h2 class="ptag">Tool</h2>
+		<p style="font-size:14px;">
+		<select id="s1">
+			<option value="">Plese select your data type</option>
+			<option value="1">Pressure data</option>
+			<option value="2">Flow rate data</option>
+			<option value="3">Magnetic flux leakage signals</option>
+			<option value="4">Ultrasonic data</option>
+			<option value="5">Acoustic emission data</option>
+			<option value="6">Vibration</option>
+			<option value="7">Eddy current data</option>
+			<option value="8">Ground penetrating radar data</option>
+			<option value="9">Video/Image</option>
+		</select>
+		<select id="s2">
+			<option value="">Plese select your target</option>
+			<option value="1">Anomaly classification</option>
+			<option value="2">Anomaly localization</option>
+			<option value="3">Anomaly quantification</option>
+		</select>
+		<input type="button" value="Click me for recommendation!" onclick="recommendation()" style="color: #9d1535;font-weight: bold;"/>
+		
+		</p>
+		<table style="border-collapse: collapse; width: 100%;" border="0">
+<tbody>
+<tr>
+<td style="width: 35%; height: 79px;">
+<p>&#8226; Pre-processing algorithms</p>
+</td>
+<td id="td1">
+</td>
+</tr>
+<tr>
+<td style=" height: 79px;">
+<p>&#8226; Feature extraction algorithms</p>
+</td>
+<td id="td2">
+</td>
+</tr>
+<tr>
+<td style="height: 79px;">
+<p>&#8226; Machine learning models</p>
+</td>
+<td id="td3">
+</td>
+</tr>
+<tr>
+<td style="height: 79px;">
+<p>&#8226; Detectable anomalies</p>
+</td>
+<td id="td4">
+</td>
+</tr>
+</tbody>
+</table>
+
+		
+		<h2 class="ptag">Related paper</h2>
+		<p style="font-size:14px;">
+		If you find this tool useful in your research, please consider citing:
+		<blockquote>Liu, Y. and Bao, Y., 2021. Review on automated condition assessment for pipelines with machine learning. (Uncomplted work)</blockquote>
+		</p>
+	
+		<!--- Page footer -->
+					</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+			</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+				
+			
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+ <div id="site-message">
+                        <p class="small-text"></p>
+                        <p class="big-text"></p>
+                </div>
+            <nav id="subnav">
+                <div class="menu-main-nav-container"><ul id="custom-submenu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-has-children menu-item-37"><a href="" aria-current="page">Home</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2032"><a href="pipeline.html">Pipeline tool</a></li>
+</ul>
+</li>
+</ul></div>            </nav>
+
+        <!---Contact Person; from Customizer, see inc/customizer.php-->
+	<aside id="search-3" class="widget widget_search"><form style="display:none" role="search" method="get" id="searchform" action="#">
+	<label for="s" class="hide">Search</label>
+	<input type="hidden" name="s" id="s"><!-- 's' is to get the WP search page. 'q' is to hold the G-CSE search query. -->
+	<label for="q" class="show-for-sr">Search</label>
+	<input type="text" name="q" id="q" placeholder="Search">
+</form>
+
+</aside></div><!-- #secondary -->
+
+<div id="tertiary" class="widget-area" role="complementary">
+	</div><!-- #secondary -->
+        </div><!-- #content-inner-container -->
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+          <div class="left">
+                    <div id="contact-caption"><p class="name">Yi Bao</p><p class="email"><a href="mailto:yi.bao@stevens.edu">yi.bao@stevens.edu</a></p><p class="phone">(201) 216-5223</p></div>
+            <a href="http://stevens.edu/" target="_blank">
+              <img alt="SIT" src="static/yb/logo-small.png">
+            </a>
+            <div id="umich-info">
+              <p class="copyright">&copy; <span class="year">2020</span>
+                <a href="http://stevens.edu/" target="_blank">Stevens Institute of Technology</a>
+              </p>
+              <p><a href="https://www.stevens.edu/schaefer-school-engineering-science/departments/civil-environmental-ocean-engineering" target="_blank">Department of Civil, Environmental and Ocean Engineering</a> | Hoboken, New Jersey 07030</p>
+              <p>+1 (201) 216-5223 | <a href="mailto:yi.bao@stevens.edu">Contact the College</a></p>
+            </div><!--- #umich-info -->
+          </div>
+
+	  <div class="right">
+	  </div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+<script type='text/javascript'>
+function recommendation(){
+	var s1 = document.getElementById("s1").value;
+	var s2 = document.getElementById("s2").value;
+	if (s1==""){
+		alert("Plese select your data type first");
+		return;
+	}
+	if (s2==""){
+		alert("Plese select your target first");
+		return;
+	}
+	var t1 = "<li></li>";
+	var t2 = "";
+	var t3 = "";
+	var t4 = "";
+	
+	console.log("s1:"+s1);
+	console.log("s2:"+s2);
+	
+	if (s1=='1'||s1=='2'){
+		t2 = "<ul> <li>Average values at the sending and receiving terminals</li><li>Average difference</li></ul>";
+		t4 = "<ul> <li>Leakage</li></ul>";
+		if (s2=='1'){
+			t1 = "<ul> <li>Segment by time</li><li>Removing outliers</li><li>Average filter</li></ul>";
+			t3 = "<ul> <li>Support vector machine</li><li>Neural network</li><li>K-nearest neighbor</li><li>Gaussian mixture model</li><li>Naïve Bayes</li><li>Multi-layer perceptron</li><li>Convolutional neural network </li><li>Decision tree</li><li>Random forest</li><li>XGBoost</li></ul>";
+		}else if (s2=='2'){
+			t1 = "<ul> <li>Segment by time</li><li>Group by positions</li><li>Removing outliers</li><li>Average filter</li></ul>";
+			t3 = "<ul> <li>Support vector machine</li><li>Neural network</li><li>K-nearest neighbor</li><li>Gaussian mixture model</li><li>Naïve Bayes</li><li>Multi-layer perceptron</li><li>Convolutional neural network </li><li>Decision tree</li><li>Random forest</li><li>XGBoost</li><li>Logistic regression</li></ul>";
+		}else if (s2=='3'){
+			t1 = "<ul> <li>Segment by time</li><li>Group by leakage size</li><li>Removing outliers</li><li>Average filter</li></ul>";
+			t3 = "<ul> <li>Support vector machine</li><li>Support Vector Regression</li><li>Neural network</li><li>K-nearest neighbor</li><li>Gaussian mixture model</li><li>Naïve Bayes</li><li>Multi-layer perceptron</li><li>Convolutional neural network </li><li>Decision tree</li><li>Random forest</li><li>XGBoost</li><li>Logistic regression</li><li>Relevance vector machine </li><li>Artificial Neural Network</li></ul>";
+			t4 = "<ul> <li>Leakage</li><li>Corrosion rate</li><li>Corrosion depth</li><li>Burst pressure</li></ul>";
+		}
+	}else if (s1=='9'){//image
+		t2 = "<ul> <li>Labeling</li></ul>";
+		t1 = "<ul> <li>Selecting images from video</li><li>Generating images from other signals</li><li>Screening</li></ul>";
+		if (s2=='1'||s2=='2'){
+			t3 = "<ul> <li>Support vector machine</li><li>Convolutional neural network </li><li>Fully convolutional network</li><li>Back propagation neural network</li><li>Faster region-based convolutional neural network (faster R-CNN)</li><li>You-only-look-once (YOLO) </li><li>AlexNet</li><li>VGG16</li><li>MobileNet</li><li>SqueezeNet</li></ul>";
+			t4 = "<ul> <li>Leakage</li><li>Corrosion</li><li>Crack</li><li>Other defects</li></ul>";
+		}else if (s2=='3'){
+			t3 = "<ul> <li>Support vector machine</li><li>Convolutional neural network </li><li>Fully convolutional network</li><li>Back propagation neural network</li><li>Faster region-based convolutional neural network (faster R-CNN)</li><li>You-only-look-once (YOLO) </li><li>AlexNet</li><li>VGG16</li><li>MobileNet</li><li>SqueezeNet</li></ul>";
+			t4 = "<ul> <li>Leakage</li><li>Corrosion</li><li>Crack</li><li>Metal-loss width, length, and depth</li><li>Other defects</li></ul>";
+		}
+	}else{
+		//other NDT signals
+		t1 = "<ul> <li>Fast Fourier transform (FFT)</li><li>Wavelet transform (WT) </li><li>Hilbert Huang transform (HHT) </li><li>Empirical mode decomposition </li><li>Blind source separation </li><li>Principal component analysis (PCA) </li></ul>";
+		t2 = "<ul> <li>The same with the pre-processing algorithms</li></ul>";
+		if (s2=='1'){
+			t3 = "<ul> <li>Support vector machine</li><li>Neural network</li><li>Relevance vector machine</li><li>Naïve Bayes</li><li>Multi-layer perceptron</li><li>Convolutional neural network </li><li>Decision tree</li><li>Random forest</li><li>XGBoost</li></ul>";
+			t4 = "<ul> <li>Leakage</li><li>Corrosion</li><li>Crack</li><li>Dent</li><li>Other defects</li></ul>";
+		}else if (s2=='2'){
+			t3 = "<ul> <li>Support vector machine</li><li>Neural network</li><li>Relevance vector machine</li><li>Naïve Bayes</li><li>Multi-layer perceptron</li><li>Convolutional neural network </li><li>Decision tree</li><li>Random forest</li><li>XGBoost</li><li>Linear regression</li></ul>";
+			t4 = "<ul> <li>Leakage</li><li>Corrosion</li><li>Crack</li><li>Dent</li><li>Other defects</li></ul>";
+		}else if (s2=='3'){
+			t3 = "<ul> <li>Support vector machine</li><li>Neural network</li><li>Relevance vector machine</li><li>Naïve Bayes</li><li>Multi-layer perceptron</li><li>Convolutional neural network </li><li>Decision tree</li><li>Random forest</li><li>XGBoost</li><li>Linear regression</li><li>Gaussian process regression</li></ul>";
+			t4 = "<ul> <li>Leakage</li><li>Corrosion</li><li>Crack</li><li>Dent</li><li>Defect length</li><li>Defect depth</li><li>Defect size</li></ul>";
+		}
+	}
+	
+	document.getElementById("td1").innerHTML = t1;
+	document.getElementById("td2").innerHTML = t2;
+	document.getElementById("td3").innerHTML = t3;
+	document.getElementById("td4").innerHTML = t4;
+}
+
+</script>
+<script type='text/javascript' src='static/js/navigation-20120206.js'></script>
+<script type='text/javascript' src='static/js/skip-link-focus-fix-20130115.js'></script>
+<script type='text/javascript' src='static/js/apply-tablesorter-5.4.2.js'></script>
+<script type='text/javascript' src='static/js/subnav-alignment-5.4.2.js'></script>
+<script type='text/javascript' src='static/js/carousel-5.4.2.js'></script>
+<script type='text/javascript' src='static/js/wp-embed.min-5.4.2.js'></script>
+<script type='text/javascript' src='static/js/e-202029.js' async='async' defer='defer'></script>
+</body>
+</html>
